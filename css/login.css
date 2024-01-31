@@ -102,7 +102,19 @@ button:hover {
     height: 52px;
     background: transparent;
     padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    outline: none;
 }
+
+.input-form:focus:not(:focus-visible) {
+    outline: none;
+}
+
+
+
+
 
 .focus-input-form {
     position: absolute;
@@ -136,12 +148,12 @@ button:hover {
     display: block;
     width: 100%;
     transition: all 0.9s;
-
+    max-width: 100%;
     position: absolute;
     top: 15px;
     left: 0;
     padding: 5px;
-    background-color: var(--cor5-);
+    background-color: none;
 
 }
 
@@ -204,3 +216,34 @@ a:hover {
     color: var(--cor4-);
 
 }
+
+.sec{
+
+    background-color: var(--cor2-);
+    width: 60%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens na flex container */
+    justify-content: space-around; /* Distribui os itens uniformemente ao longo do eixo principal */
+    height: 100vh; /* 100% da altura da viewport */
+}
+
+.sec2{
+    padding: 10%;
+    background-color: var(--cor3-);
+    border-radius: 12px;
+    box-shadow: 0px 0px 22px 0px rgba(35, 35, 35, 0.341);}
+
+    @media screen and (max-width: 1050px) {
+        .sec{
+            padding-top: 7%;
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+        .cadastro-form {
+            margin-top: 25%;
+            margin-left: -10%;
+            padding: 10%;
+        }
+    }

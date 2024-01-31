@@ -56,7 +56,7 @@
                 </form>
                 </section>
             </div>
-            <img src="img/doutor.svg" alt="cadastro" width="500" height="500">
+            <img src="img/doutor.svg" alt="cadastro">
         </div>
         <script>
             let inputs = document.getElementsByClassName('input-form');

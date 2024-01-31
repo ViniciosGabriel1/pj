@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor2-);
+    font-family: 'Popping-Regular', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: var(--cor3-);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+    padding: 15px;
+}
+
+.menu {
+    margin: 1%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu a {
+    display: block;
+    color: var(--cor2-);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.menu a:hover {
+    color: var(--cor2-); /* Adiciona cor ao texto no hover */
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    background-color: var(--cor2-);
+}
+
+/* Adaptação para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo,
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+}
+.profissionais {
+    
+    display: flex;
+    padding: 5%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.profissional-card {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--cor3-);
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 10px;
+    width: calc(30% - 20px); /* Use a propriedade calc para calcular a largura e adicione margens */
+}
+
+.profissional-card img {
+    width: 100%;
+    height: 70%;
+}
+
+.profissional-info {
+    padding: 15px;
+}
+
+.profissional-info h3 {
+    
+    margin-top: 0;
+}
+
+.profissional-info p {
+    margin: 10px 0;
+}
+
+.profissional-info button {
+    background-color: var(--cor1-);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+
+}
+
+/* Adaptação para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .profissional-card {
+        width: calc(48% - 20px); /* Ajuste para dois cards por linha */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profissional-card {
+        width: 100%; /* Um card por linha em telas menores */
+    }
+}

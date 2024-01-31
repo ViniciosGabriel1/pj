@@ -72,7 +72,6 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     background: var(--cor-1);
 }
 
@@ -85,6 +84,10 @@ button:hover {
 .cadastro-form {
     display: block;
     font-family: Poppins-Bold;
+    padding: 12%;
+    background-color: var(--cor3-);
+    width: 100%;
+    border-radius: 7px;
 }
 
 .wrap-input {
@@ -205,21 +208,34 @@ a:hover {
 
 }
 
+.container img{
+    width: 50%;
+}
 .sec{
 
-    padding: 19px;
     background-color: var(--cor2-);
-    width: 70%;
+    width: 80%;
     border-radius: 12px;
     display: flex;
     align-items: center; /* Centraliza verticalmente os itens na flex container */
     justify-content: space-around; /* Distribui os itens uniformemente ao longo do eixo principal */
     height: 100vh; /* 100% da altura da viewport */
-    
 }
 
 .sec2{
     background-color: var(--cor3-);
-    padding: 50px;
     border-radius: 12px;
     box-shadow: 0px 0px 22px 0px rgba(35, 35, 35, 0.341);}
+
+    @media screen and (max-width: 1050px) {
+        .sec{
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+        }
+        .cadastro-form {
+            margin-top: 25%;
+            margin-left: -10%;
+            padding: 10%;
+        }
+    }

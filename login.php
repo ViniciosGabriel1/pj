@@ -12,12 +12,14 @@
 <body>
     <div class="container">
         <div class="container-login">
+        <section class="sec">
             <div class="wrapper-login">
+            <section class="sec2">
                 <form action="processa_login.php" class="login-form">
                     <span class="form-title">Faça Login</span>
 
                     <div class="wrap-input margin-top-35 margin-bottom-35">
-                        <input type="email" name="email" class="input-form">
+                        <input type="email" name="email" class="input-form" autocomplete="off">
                         <span class="focus-input-form" data-placeholder="E-mail"></span>
                     </div>
 
@@ -40,6 +42,7 @@
                         </li>
                     </ul>
                 </form>
+                </section>
             </div>
             <img src="img/doutor.svg" alt="Login" width="500" height="500">
         </div>
@@ -58,6 +61,7 @@
         </script>
 
     </div>
+    </section>
 
 </body>
 
