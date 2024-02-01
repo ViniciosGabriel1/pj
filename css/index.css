@@ -3,13 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    background-color: var(--cor2-);
+
+    background-color: var(--cor4-);
     font-family: 'Popping-Regular', sans-serif;
     margin: 0;
     padding: 0;
+    height: 10%;
 }
+
+.fundo {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--cor4-);
+    margin: 0;
+    padding: 0;
+}
+
+
+
 
 .header {
     background-color: var(--cor3-);
@@ -26,6 +42,11 @@ body {
 }
 
 .menu {
+    
+        background: url('img/medicofundo.webp') no-repeat center center fixed;
+        background-size: cover;
+        /* Outros estilos para o conteúdo, se necessário */
+    
     margin: 1%;
 }
 
@@ -43,7 +64,7 @@ body {
 
 .menu a {
     display: block;
-    color: var(--cor2-);
+    color: var(--cor4-);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -64,7 +85,8 @@ body {
 }
 
 .menu a:hover {
-    color: var(--cor2-); /* Adiciona cor ao texto no hover */
+    color: var(--cor2-);
+    /* Adiciona cor ao texto no hover */
 }
 
 .menu a:hover::before {
@@ -93,7 +115,8 @@ body {
 .profissionais {
 
     display: flex;
-    padding: 5vw; /* Alterado para usar a unidade vw (viewport width) */
+    padding: 5vw;
+    /* Alterado para usar a unidade vw (viewport width) */
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -107,13 +130,15 @@ body {
     overflow: hidden;
     margin: 10px;
     width: 20%;
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Adiciona transição suave */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* Adiciona transição suave */
 }
 
 .profissional-card img {
     width: 100%;
     height: 70%;
-    object-fit: cover; /* Garante que a imagem mantenha as proporções e cubra todo o espaço disponível */
+    object-fit: cover;
+    /* Garante que a imagem mantenha as proporções e cubra todo o espaço disponível */
 }
 
 .profissional-info {
@@ -131,50 +156,140 @@ body {
 .profissional-info button {
     background-color: var(--cor1-);
     color: #fff;
-    padding: 8px; /* Ajuste o padding do botão para torná-lo mais proporcional */
+    padding: 8px;
+    /* Ajuste o padding do botão para torná-lo mais proporcional */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Ocupa toda a largura por padrão */
-    box-sizing: border-box; /* Certifica-se de que as bordas e o preenchimento não afetam a largura total */
+    width: 100%;
+    /* Ocupa toda a largura por padrão */
+    box-sizing: border-box;
+    /* Certifica-se de que as bordas e o preenchimento não afetam a largura total */
     margin-top: 10px;
-    transition: width 0.3s ease, padding 0.3s ease; /* Adiciona uma transição suave para a largura e o padding do botão */
+    transition: width 0.3s ease, padding 0.3s ease;
+    /* Adiciona uma transição suave para a largura e o padding do botão */
 }
 
 /* Adaptação para dispositivos móveis */
 @media screen and (max-width: 1226px) {
     .profissional-card {
-        width: calc(48% - 20px); /* Ajuste para dois cards por linha */
+        width: calc(48% - 20px);
+        /* Ajuste para dois cards por linha */
     }
 
     .profissional-info {
-        padding: 5%; /* Ajusta o padding para melhor adaptação em telas menores */
+        padding: 5%;
+        /* Ajusta o padding para melhor adaptação em telas menores */
     }
 
     .profissional-info button {
         width: 100%;
-        padding: 10px; /* Ajusta o padding do botão para melhor adaptação em telas menores */
+        padding: 10px;
+        /* Ajusta o padding do botão para melhor adaptação em telas menores */
     }
 }
 
 @media screen and (max-width: 562px) {
     .profissional-card {
-        width: 100%; /* Um card por linha em telas menores */
+        width: 100%;
+        /* Um card por linha em telas menores */
     }
 
     .profissional-info {
-        padding: 5%; /* Ajusta o padding para melhor adaptação em telas menores */
+        padding: 5%;
+        /* Ajusta o padding para melhor adaptação em telas menores */
     }
 
     .profissional-info button {
         width: 100%;
-        padding: 3%; /* Ajusta o padding do botão para melhor adaptação em telas menores */
+        padding: 3%;
+        /* Ajusta o padding do botão para melhor adaptação em telas menores */
     }
 }
 
 .profissional-card:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao card no hover */
-    transform: scale(1.02); /* Aumenta ligeiramente o tamanho do card no hover */
+    box-shadow: 0px 0px 38px 0px #40FF67;
+    transform: scale(1.02);
+    /* Aumenta ligeiramente o tamanho do card no hover */
+}
+.como-funciona {
+    text-align: center;
+    
+    margin: 20px 0;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 35%; /* Ajuste a posição vertical conforme necessário */
+    right: 70%; /* Ajuste a posição horizontal conforme necessário */
+    background-color: var(--cor2-);
+    color: #fff;
+    padding: 8px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease; /* Adicione uma transição suave de cor de fundo */
+
 }
 
+.como-funciona:hover {
+    background-color: var(--cor1-);
+    transform: scale(1.02);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.como-funciona h2 {
+    color: var(--cor3-);
+}
+
+.como-funciona p {
+    margin-bottom: 10px;
+}
+
+.como-funciona ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.como-funciona li {
+    margin-bottom: 5px;
+}
+
+.beneficios {
+    background-color: var(--cor1-);
+    color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.beneficios h2 {
+    color: #fff;
+}
+
+.beneficios ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.beneficios li {
+    margin-bottom: 5px;}
+
+
+    .botao2 {
+        position: absolute;
+        bottom: 0%; /* Ajuste a posição vertical conforme necessário */
+        right: 52%; /* Ajuste a posição horizontal conforme necessário */
+        background-color: var(--cor1-);
+        color: #fff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000; /* Ajuste a ordem de empilhamento conforme necessário */
+        /* Adicione mais estilos conforme necessário */
+    }
 
